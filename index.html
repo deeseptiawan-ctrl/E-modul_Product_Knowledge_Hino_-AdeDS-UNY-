@@ -147,12 +147,15 @@ document.body.addEventListener("click", goFull);
 <script>
 function keluarModul() {
 
+  // keluar fullscreen
   if (document.fullscreenElement) {
     document.exitFullscreen();
   }
 
+  // HP
   if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
 
+    // pindah halaman kosong
     setTimeout(function () {
       document.body.innerHTML = "";
       document.body.style.background = "black";
@@ -160,6 +163,7 @@ function keluarModul() {
 
   } else {
 
+    // Laptop
     setTimeout(function () {
       window.open('', '_self');
       window.close();
@@ -169,7 +173,6 @@ function keluarModul() {
 
 }
 </script>
-
 <script>
 localStorage.removeItem("ResumeData");
 localStorage.removeItem("storylineResumeData");
