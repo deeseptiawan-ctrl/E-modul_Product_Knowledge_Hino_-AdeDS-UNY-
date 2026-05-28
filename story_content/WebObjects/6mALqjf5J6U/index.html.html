@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulator Gradeability - Penjelasan Konsep</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    min-height:100%;
+    margin:0;
+    overflow-x:hidden;
+}
+
+body{
+    font-family:'Arial',sans-serif;
+    background:#ffffff;
+    padding:14px;
+    color:#333;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    overflow-y:auto;
+}
+
+.container{
+    width:100%;
+    max-width:1400px;
+    border:4px solid #d00000;
+    padding:30px;
+    background:#ffffff;
+    border-radius:18px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* TITLE */
+
+h2{
+    margin:0 0 18px 0;
+    font-size:48px;
+    color:#000;
+    font-weight:900;
+    text-align:center;
+    line-height:1.3;
+}
+
+.description{
+    font-size:28px;
+    line-height:1.7;
+    margin-bottom:28px;
+    background:#f9f9f9;
+    padding:22px;
+    border-left:8px solid #d00000;
+    text-align:center;
+    border-radius:10px;
+}
+
+/* CONTENT */
+
+.content-area{
+    display:flex;
+    flex-direction:column;
+    gap:26px;
+}
+
+/* VISUAL */
+
+.visual-box{
+    border:2px solid #ccc;
+    background:#fafafa;
+    padding:28px 18px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    border-radius:14px;
+    overflow:hidden;
+}
+
+svg{
+    width:100%;
+    max-width:900px;
+    height:auto;
+    max-height:420px;
+    flex-shrink:0;
+}
+
+/* EXPLANATION */
+
+.explanation-box{
+    margin-top:24px;
+    padding:24px 28px;
+    border-radius:14px;
+    background:#f1f8e9;
+    border:3px solid #8bc34a;
+    font-size:24px;
+    line-height:1.8;
+    width:95%;
+    color:#2e7d32;
+}
+
+.status-box{
+    margin-top:24px;
+    padding:22px 26px;
+    border-radius:14px;
+    text-align:center;
+    font-weight:bold;
+    font-size:24px;
+    width:95%;
+    transition:all 0.3s;
+    line-height:1.7;
+    word-break:break-word;
+}
+
+/* SLIDER */
+
+.sliders-section{
+    background:#fff5f5;
+    padding:28px;
+    border-radius:14px;
+    border:3px solid #d00000;
+}
+
+.slider-group{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.slider-group label{
+    font-weight:900;
+    font-size:30px;
+    margin-bottom:20px;
+    color:#d00000;
+    text-align:center;
+    line-height:1.5;
+}
+
+.slider-group input{
+    width:85%;
+    cursor:pointer;
+    height:12px;
+}
+
+.slider-value{
+    margin-top:20px;
+    font-weight:900;
+    color:#333;
+    font-size:54px;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+    body{
+        padding:10px;
+    }
+
+    .container{
+        padding:18px;
+    }
+
+    h2{
+        font-size:32px;
+    }
+
+    .description{
+        font-size:18px;
+        padding:16px;
+    }
+
+    svg{
+        max-height:280px;
+    }
+
+    .explanation-box{
+        font-size:17px;
+        padding:18px;
+        width:100%;
+    }
+
+    .status-box{
+        font-size:17px;
+        padding:18px;
+        width:100%;
+    }
+
+    .slider-group label{
+        font-size:22px;
+    }
+
+    .slider-value{
+        font-size:40px;
+    }
+
+    .slider-group input{
+        width:100%;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>
+Memahami Arti Persentase Daya Tanjak
+</h2>
+
+<div class="description">
+Geser angka persentase di bawah ini untuk melihat ilustrasi kemiringan jalan.
+Perhatikan kotak penjelasan hijau untuk memahami maksud dari angka tersebut!
+</div>
+
+<div class="content-area">
+
+<div class="visual-box">
+
+<svg id="visualSvg" viewBox="0 0 500 220">
+
+<polygon id="triangle"
+points="40,190 360,190 360,190"
+fill="rgba(208, 0, 0, 0.15)"
+stroke="#d00000"
+stroke-width="2"/>
+
+<line x1="40" y1="190" x2="360" y2="190"
+stroke="#333"
+stroke-width="2"/>
+
+<line x1="360" y1="190"
+x2="360"
+y2="190"
+id="riseLine"
+stroke="#333"
+stroke-dasharray="4"
+stroke-width="1.5"/>
+
+<text x="200"
+y="210"
+text-anchor="middle"
+font-size="14"
+font-weight="bold">
+Jarak Mendatar: 100 Meter
+</text>
+
+<text x="375"
+y="190"
+id="riseText"
+font-size="14"
+font-weight="bold"
+fill="#d00000">
+Naik: 0 m
+</text>
+
+<g id="truckGroup" transform="translate(40,190)">
+
+<rect x="-22" y="-16"
+width="32"
+height="16"
+fill="#d00000"
+rx="2"/>
+
+<rect x="10" y="-11"
+width="10"
+height="11"
+fill="#222"
+rx="1"/>
+
+<rect x="12" y="-9"
+width="6"
+height="5"
+fill="#e0f7fa"/>
+
+<rect x="-20" y="-26"
+width="28"
+height="10"
+fill="#999"
+rx="1"/>
+
+<circle cx="-10" cy="2"
+r="4.5"
+fill="#111"
+stroke="#fff"
+stroke-width="1"/>
+
+<circle cx="6" cy="2"
+r="4.5"
+fill="#111"
+stroke="#fff"
+stroke-width="1"/>
+
+</g>
+
+</svg>
+
+<div class="explanation-box">
+
+<div style="
+font-weight:bold;
+font-size:30px;
+margin-bottom:14px;
+color:#1b5e20;
+">
+📚 Penjelasan Konsep:
+</div>
+
+<span id="explanationText">
+
+Arti dari Daya Tanjak <b>0%</b> adalah:
+<br><br>
+
+Truk mampu mendaki jalan setinggi <b>0 meter</b>
+secara vertikal, untuk setiap pergerakan lurus sejauh
+<b>100 meter</b> jarak mendatar,
+dalam kondisi bak terisi muatan penuh (GVM maksimal).
+
+</span>
+
+</div>
+
+<div id="statusBox" class="status-box">
+Rekomendasi Rute: Jalan Tol & Dalam Kota
+</div>
+
+</div>
+
+<div class="sliders-section">
+
+<div class="slider-group">
+
+<label for="gradeSlider">
+Geser Angka Daya Tanjak Sesuai Brosur (%)
+</label>
+
+<input type="range"
+id="gradeSlider"
+min="10"
+max="60"
+value="30"
+oninput="updateVisual()">
+
+<div class="slider-value" id="gradeValue">
+30%
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function updateVisual(){
+
+var persen =
+parseFloat(
+document.getElementById('gradeSlider').value
+);
+
+document.getElementById('gradeValue')
+.innerText = persen + "%";
+
+document.getElementById('explanationText')
+.innerHTML =
+"Arti dari Daya Tanjak <b>" + persen + "%</b> adalah:<br><br>" +
+"Truk mampu mendaki jalan setinggi <b>" + persen +
+" meter</b> secara vertikal, untuk setiap pergerakan lurus sejauh " +
+"<b>100 meter</b> jarak mendatar, dalam kondisi bak terisi muatan penuh (GVM maksimal).";
+
+var risePixels = (persen / 100) * 320;
+
+if(risePixels > 160){
+risePixels = 160;
+}
+
+var topY = 190 - risePixels;
+
+document.getElementById('triangle')
+.setAttribute(
+'points',
+`40,190 360,190 360,${topY}`
+);
+
+document.getElementById('riseLine')
+.setAttribute('y1','190');
+
+document.getElementById('riseLine')
+.setAttribute('y2',topY.toString());
+
+var riseText =
+document.getElementById('riseText');
+
+riseText.setAttribute(
+'y',
+(190 - (risePixels / 2)).toString()
+);
+
+riseText.textContent =
+"Naik: " + persen + " m";
+
+var visualAngleRad =
+Math.atan(risePixels / 320);
+
+var visualAngleDeg =
+visualAngleRad * (180 / Math.PI);
+
+var midX = 200;
+var midY = 190 - (risePixels / 2);
+
+document.getElementById('truckGroup')
+.setAttribute(
+'transform',
+`translate(${midX}, ${midY}) rotate(${-visualAngleDeg})`
+);
+
+var statusBox =
+document.getElementById('statusBox');
+
+if (persen < 25){
+
+statusBox.innerHTML =
+"💡 Rekomendasi Rute: Jalan Mendatar (Tol, Aspal Dalam Kota, Kargo Ringan)";
+
+statusBox.style.backgroundColor =
+"#e8f5e9";
+
+statusBox.style.border =
+"3px solid #4caf50";
+
+statusBox.style.color =
+"#2e7d32";
+
+}
+
+else if (persen >= 25 && persen <= 35){
+
+statusBox.innerHTML =
+"💡 Rekomendasi Rute: Tanjakan Menengah (Lintas Provinsi, Perbukitan Aspal)";
+
+statusBox.style.backgroundColor =
+"#fff3e0";
+
+statusBox.style.border =
+"3px solid #ff9800";
+
+statusBox.style.color =
+"#ef6c00";
+
+}
+
+else{
+
+statusBox.innerHTML =
+"💡 Rekomendasi Rute: Ekstrem (Area Tambang, Galian Pasir, Tanjakan Tanah Curam)";
+
+statusBox.style.backgroundColor =
+"#ffebee";
+
+statusBox.style.border =
+"3px solid #f44336";
+
+statusBox.style.color =
+"#c62828";
+}
+}
+
+updateVisual();
+
+</script>
+
+</body>
+</html>

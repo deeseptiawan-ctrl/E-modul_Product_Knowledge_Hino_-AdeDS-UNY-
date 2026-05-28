@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabel Spesifikasi Hino 300 Series (Lengkap dengan MDLR)</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 15px;
+            color: #333;
+        }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto; /* Memastikan bisa digeser jika layar terlalu kecil */
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 1000px; /* Menjaga proporsi landscape */
+            text-align: center;
+            font-size: 13px;
+            background-color: #fff;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 8px 5px;
+        }
+
+        th {
+            background-color: #b3e5fc; /* Biru muda Hino */
+            font-weight: bold;
+            color: #000;
+        }
+
+        .model-name {
+            text-align: left;
+            padding-left: 10px;
+            white-space: nowrap;
+        }
+
+        .highlight-mdlr {
+            background-color: #fff9c4; /* Sorotan kuning muda untuk MDLR */
+            font-weight: bold;
+        }
+
+        /* Warna khusus untuk pengelompokan Kategori */
+        .cat-cargo { background-color: #e1f5fe; font-weight: bold; font-size: 14px; letter-spacing: 2px; }
+        .cat-dump  { background-color: #fbe9e7; font-weight: bold; font-size: 14px; letter-spacing: 2px; color: #d32f2f; }
+        .cat-mixer { background-color: #fff3e0; font-weight: bold; font-size: 14px; letter-spacing: 2px; color: #e65100; }
+        
+        .cat-vertical {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            padding: 20px 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th width="4%">Kategori</th>
+                <th width="3%">No.</th>
+                <th width="15%">Model</th>
+                <th width="10%">Tipe Engine</th>
+                <th width="12%">Gradeability<br>(tan %)</th>
+                <th width="12%">Transmisi</th>
+                <th width="12%">Differential</th>
+                <th width="9%">GVW (kg)</th>
+                <th width="6%">Drive</th>
+                <th width="17%">Panjang Bodi (mm)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="10" class="cat-cargo cat-vertical">CARGO</td>
+                <td>1.</td>
+                <td class="model-name">115SD</td>
+                <td rowspan="4">N04C-WV</td>
+                <td rowspan="3">46,7</td>
+                <td rowspan="7">RE50<br>(5 Speed)</td>
+                <td rowspan="3">4,625</td>
+                <td rowspan="3">5.400</td>
+                <td rowspan="8">4x2</td>
+                <td>2.980</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td class="model-name">115SDR</td>
+                <td>3.340</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td class="model-name">115SDL</td>
+                <td>4.700</td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td class="model-name">115LD</td>
+                <td>36,9</td>
+                <td rowspan="4">5,125</td>
+                <td>7.000</td>
+                <td>4.600</td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td class="model-name">136MD</td>
+                <td rowspan="6">N04C-WY</td>
+                <td rowspan="3">36,7</td>
+                <td rowspan="3">8.250</td>
+                <td>4.600</td>
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td class="model-name">136MDL</td>
+                <td>5.500</td>
+            </tr>
+            <tr class="highlight-mdlr">
+                <td>7.</td>
+                <td class="model-name">136MDLR <span style="color:#d32f2f; font-size:10px;">(NEW)</span></td>
+                <td>6.285</td>
+            </tr>
+            <tr>
+                <td>8.</td>
+                <td class="model-name">136HDL</td>
+                <td>47,5/53,5</td>
+                <td rowspan="3">RE61<br>(6 Speed)</td>
+                <td>5,857 / 6,428</td>
+                <td rowspan="2">8.600</td>
+                <td>5.500</td>
+            </tr>
+            <tr>
+                <td>9.</td>
+                <td class="model-name">136HDL 4x4</td>
+                <td>67</td>
+                <td>6,833</td>
+                <td>4x4</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>10.</td>
+                <td class="model-name">136HDL 6x2</td>
+                <td>30</td>
+                <td>6,428</td>
+                <td>14.000</td>
+                <td>6x2</td>
+                <td>5.400</td>
+            </tr>
+
+            <tr>
+                <td rowspan="5" class="cat-dump cat-vertical">DUMP</td>
+                <td>1.</td>
+                <td class="model-name">115HD</td>
+                <td>N04C-WV</td>
+                <td>38,5</td>
+                <td>RE50<br>(5 Speed)</td>
+                <td>6,428</td>
+                <td>7.500</td>
+                <td rowspan="4">4x2</td>
+                <td rowspan="5">4.250</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td class="model-name">136HD</td>
+                <td rowspan="4">N04C-WY</td>
+                <td>42,9/46,2</td>
+                <td rowspan="4">RE61<br>(6 Speed)</td>
+                <td>6,428 / 6,833</td>
+                <td rowspan="4">8.600</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td class="model-name">136HD Xpower</td>
+                <td>47,5/58,1</td>
+                <td>5,857 / 6,833</td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td class="model-name">136 HD Plantation</td>
+                <td>47,5</td>
+                <td>5,857</td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td class="model-name">136HDX 4x4</td>
+                <td>67</td>
+                <td>6,833</td>
+                <td>4x4</td>
+            </tr>
+
+            <tr>
+                <td class="cat-mixer cat-vertical" style="padding: 10px 5px;">MIXER</td>
+                <td>1.</td>
+                <td class="model-name">136HD Mixer</td>
+                <td>N04C-WY</td>
+                <td>47,5</td>
+                <td>RE61<br>(6 Speed)</td>
+                <td>5,857</td>
+                <td>8.600</td>
+                <td>4x2</td>
+                <td>4.250</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabel Spesifikasi Hino 500 Series</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 15px;
+            color: #333;
+        }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 1100px;
+            text-align: center;
+            font-size: 13px;
+            background-color: #fff;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 6px 4px;
+        }
+
+        th {
+            background-color: #b3e5fc; /* Biru Hino */
+            font-weight: bold;
+            color: #000;
+        }
+
+        .model-name {
+            text-align: left;
+            padding-left: 10px;
+            white-space: nowrap;
+        }
+
+        .label-gvw {
+            color: #444;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .label-gcw {
+            color: #2e7d32; /* Hijau khusus penanda GCW */
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        /* Warna Kategori */
+        .cat-cargo { background-color: #e1f5fe; font-weight: bold; font-size: 14px; letter-spacing: 2px; }
+        .cat-dump  { background-color: #fbe9e7; font-weight: bold; font-size: 14px; letter-spacing: 2px; color: #d32f2f; }
+        .cat-mixer { background-color: #fff3e0; font-weight: bold; font-size: 14px; letter-spacing: 2px; color: #e65100; }
+        .cat-tractor { background-color: #e8f5e9; font-weight: bold; font-size: 14px; letter-spacing: 2px; color: #2e7d32; }
+
+        .cat-vertical {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            padding: 20px 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th width="3%">No.</th>
+                <th width="4%">Kategori</th>
+                <th width="14%">Model</th>
+                <th width="9%">Tipe Engine</th>
+                <th width="10%">Gradeablity<br>(tan %)</th>
+                <th width="12%">Transmisi</th>
+                <th width="10%">Differential</th>
+                <th width="11%">Total Berat<br>(kg)</th>
+                <th width="6%">Drive</th>
+                <th width="11%">Panjang Bodi<br>(mm)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1.</td>
+                <td rowspan="14" class="cat-cargo cat-vertical">CARGO</td>
+                <td class="model-name">FG260JU</td>
+                <td rowspan="10">J08E-WE</td>
+                <td rowspan="6">48</td>
+                <td rowspan="10">MX07<br>(7 Speed)</td>
+                <td rowspan="10">6,428</td>
+                <td rowspan="6">16.000<br><span class="label-gvw">(GVW)</span></td>
+                <td rowspan="6">4x2</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td class="model-name">FG260JP</td>
+                <td>7.550</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td class="model-name">FG260JK</td>
+                <td rowspan="2">6.000</td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td class="model-name">FG260JK ABS</td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td class="model-name">FG260JL</td>
+                <td>6.500</td>
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td class="model-name">FG260JS</td>
+                <td>8.490</td>
+            </tr>
+            <tr>
+                <td>7.</td>
+                <td class="model-name">FL260JN</td>
+                <td rowspan="4">26</td>
+                <td rowspan="6">26.000<br><span class="label-gvw">(GVW)</span></td>
+                <td rowspan="6">6x2</td>
+                <td rowspan="2">6.750</td>
+            </tr>
+            <tr>
+                <td>8.</td>
+                <td class="model-name">FL260JN ABS</td>
+            </tr>
+            <tr>
+                <td>9.</td>
+                <td class="model-name">FL260JW</td>
+                <td rowspan="2">9.750</td>
+            </tr>
+            <tr>
+                <td>10.</td>
+                <td class="model-name">FL260JW ABS</td>
+            </tr>
+            <tr>
+                <td>11.</td>
+                <td class="model-name">FL280JT</td>
+                <td rowspan="4">J08E-WD</td>
+                <td rowspan="2">53</td>
+                <td rowspan="4">M009DD<br>(9 Speed)</td>
+                <td rowspan="3">5,857</td>
+                <td>7.750</td>
+            </tr>
+            <tr>
+                <td>12.</td>
+                <td class="model-name">FL280JW</td>
+                <td>9.750</td>
+            </tr>
+            <tr>
+                <td>13.</td>
+                <td class="model-name">FLX280JW</td>
+                <td>41</td>
+                <td>32.000<br><span class="label-gvw">(GVW)</span></td>
+                <td>8x2</td>
+                <td>9.780</td>
+            </tr>
+            <tr>
+                <td>14.</td>
+                <td class="model-name">FM280JW</td>
+                <td>60</td>
+                <td>6,428</td>
+                <td>26.000<br><span class="label-gvw">(GVW)</span></td>
+                <td>6x4</td>
+                <td>9.750</td>
+            </tr>
+
+            <tr>
+                <td>1.</td>
+                <td rowspan="7" class="cat-dump cat-vertical">DUMP</td>
+                <td class="model-name">FG260JJ</td>
+                <td>J08E-WE</td>
+                <td>48</td>
+                <td>MX07<br>(7 Speed)</td>
+                <td rowspan="5">6,428</td>
+                <td>16.000<br><span class="label-gvw">(GVW)</span></td>
+                <td>4x2</td>
+                <td>5.475</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td class="model-name">FM280JD</td>
+                <td rowspan="4">J08E-WD</td>
+                <td rowspan="4">60</td>
+                <td rowspan="4">M009 DD<br>(9 Speed)</td>
+                <td rowspan="6">26.000<br><span class="label-gvw">(GVW)</span></td>
+                <td rowspan="6">6x4</td>
+                <td rowspan="4">6.400</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td class="model-name">FM280JD ABS</td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td class="model-name">FM280JD (Mining Spec)</td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td class="model-name">FM280JD R</td>
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td class="model-name">FM340PL</td>
+                <td rowspan="2">P11C-WN</td>
+                <td>71</td>
+                <td rowspan="2">M009 OD<br>(9 Speed)</td>
+                <td rowspan="2">5,857</td>
+                <td>6.405</td>
+            </tr>
+            <tr>
+                <td>7.</td>
+                <td class="model-name">FM340PD</td>
+                <td>62</td>
+                <td>6.505</td>
+            </tr>
+
+            <tr>
+                <td>1.</td>
+                <td class="cat-mixer cat-vertical" style="padding: 10px 5px;">MIXER</td>
+                <td class="model-name">FM280JM</td>
+                <td>J08E-WD</td>
+                <td>60</td>
+                <td>M009 OD<br>(9 Speed)</td>
+                <td>6,428</td>
+                <td>26.000<br><span class="label-gvw">(GVW)</span></td>
+                <td>6x4</td>
+                <td>5.230</td>
+            </tr>
+
+            <tr>
+                <td>1.</td>
+                <td rowspan="7" class="cat-tractor cat-vertical">TRACTOR<br>HEAD</td>
+                <td class="model-name">FG260TH</td>
+                <td>J08E-WE</td>
+                <td>48</td>
+                <td>MX07<br>(7 Speed)</td>
+                <td>6,428</td>
+                <td>34.000<br><span class="label-gcw">(GCW)</span></td>
+                <td rowspan="3">4x2</td>
+                <td rowspan="7">-</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td class="model-name">SG280TH</td>
+                <td rowspan="4">J08E-WD</td>
+                <td rowspan="2">31</td>
+                <td rowspan="4">M009 DD<br>(9 Speed)</td>
+                <td rowspan="2">5,428</td>
+                <td rowspan="2">37.000<br><span class="label-gcw">(GCW)</span></td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td class="model-name">SG280TH ABS</td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td class="model-name">FM280TH</td>
+                <td rowspan="2">34</td>
+                <td rowspan="2">5,857</td>
+                <td rowspan="2">38.000<br><span class="label-gcw">(GCW)</span></td>
+                <td rowspan="4">6x4</td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td class="model-name">FM280TH ABS</td>
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td class="model-name">FM340TH</td>
+                <td rowspan="2">P11C-WN</td>
+                <td rowspan="2">33</td>
+                <td rowspan="2">M009 OD<br>(9 Speed)</td>
+                <td rowspan="2">5,857</td>
+                <td rowspan="2">46.000<br><span class="label-gcw">(GCW)</span></td>
+            </tr>
+            <tr>
+                <td>7.</td>
+                <td class="model-name">FM340TH ABS</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
