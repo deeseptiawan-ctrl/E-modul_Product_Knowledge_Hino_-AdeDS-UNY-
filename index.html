@@ -135,6 +135,30 @@
   <link rel="stylesheet" href="html5/data/css/output.min.css" data-noprefix/>
 </body>
 <script>
+function goFull() {
+
+  if (!document.fullscreenElement) {
+
+    let elem = document.documentElement;
+
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen().catch(()=>{});
+    } else if (elem.webkitRequestFullscreen) {
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+      elem.msRequestFullscreen();
+    }
+
+  }
+
+}
+
+// fullscreen saat disentuh / diklik
+document.addEventListener("click", goFull);
+document.addEventListener("touchstart", goFull);
+</script>
+
+<script>
 function keluarModul() {
 
   // keluar fullscreen
@@ -145,7 +169,7 @@ function keluarModul() {
   // HP
   if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
 
-    // pindah halaman kosong
+    // layar kosong hitam
     setTimeout(function () {
       document.body.innerHTML = "";
       document.body.style.background = "black";
@@ -162,6 +186,12 @@ function keluarModul() {
   }
 
 }
-</script>  
+</script>
+
+<script>
+localStorage.removeItem("ResumeData");
+localStorage.removeItem("storylineResumeData");
+</script>
+
 <script src="html5/lib/scripts/bootstrapper.min.js"></script>
 </html>
