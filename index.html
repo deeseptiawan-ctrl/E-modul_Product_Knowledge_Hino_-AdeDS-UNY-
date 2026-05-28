@@ -153,9 +153,10 @@ function goFull() {
 
 }
 
-// fullscreen saat disentuh / diklik
-document.addEventListener("click", goFull);
-document.addEventListener("touchstart", goFull);
+// HANYA SEKALI SAJA
+document.addEventListener("click", goFull, { once: true });
+document.addEventListener("touchstart", goFull, { once: true });
+
 </script>
 
 <script>
