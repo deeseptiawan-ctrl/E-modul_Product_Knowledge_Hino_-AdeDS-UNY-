@@ -136,41 +136,23 @@
 </body>
 <script>
 function goFull() {
-
-  if (!document.fullscreenElement) {
-
-    let elem = document.documentElement;
-
-    if (elem.requestFullscreen) {
-      elem.requestFullscreen().catch(()=>{});
-    } else if (elem.webkitRequestFullscreen) {
-      elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) {
-      elem.msRequestFullscreen();
-    }
-
+  if (!document.fullscreenElement && document.documentElement.requestFullscreen) {
+    document.documentElement.requestFullscreen().catch(()=>{});
   }
-
 }
-
-// HANYA SEKALI SAJA
-document.addEventListener("click", goFull, { once: true });
-document.addEventListener("touchstart", goFull, { once: true });
-
+document.body.addEventListener("touchstart", goFull);
+document.body.addEventListener("click", goFull);
 </script>
 
 <script>
 function keluarModul() {
 
-  // keluar fullscreen
   if (document.fullscreenElement) {
     document.exitFullscreen();
   }
 
-  // HP
   if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
 
-    // layar kosong hitam
     setTimeout(function () {
       document.body.innerHTML = "";
       document.body.style.background = "black";
@@ -178,7 +160,6 @@ function keluarModul() {
 
   } else {
 
-    // Laptop
     setTimeout(function () {
       window.open('', '_self');
       window.close();
