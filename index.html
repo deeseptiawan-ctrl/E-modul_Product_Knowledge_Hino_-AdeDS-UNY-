@@ -134,5 +134,49 @@
 
   <link rel="stylesheet" href="html5/data/css/output.min.css" data-noprefix/>
 </body>
+<script>
+function goFull() {
+  if (!document.fullscreenElement && document.documentElement.requestFullscreen) {
+    document.documentElement.requestFullscreen().catch(()=>{});
+  }
+}
+document.body.addEventListener("touchstart", goFull);
+document.body.addEventListener("click", goFull);
+</script>
+
+<script>
+function keluarModul() {
+
+  // keluar fullscreen
+  if (document.fullscreenElement) {
+    document.exitFullscreen();
+  }
+
+  // HP
+  if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+
+    // pindah halaman kosong
+    setTimeout(function () {
+      document.body.innerHTML = "";
+      document.body.style.background = "black";
+    }, 300);
+
+  } else {
+
+    // Laptop
+    setTimeout(function () {
+      window.open('', '_self');
+      window.close();
+    }, 300);
+
+  }
+
+}
+</script>
+<script>
+localStorage.removeItem("ResumeData");
+localStorage.removeItem("storylineResumeData");
+</script>
+
 <script src="html5/lib/scripts/bootstrapper.min.js"></script>
 </html>
