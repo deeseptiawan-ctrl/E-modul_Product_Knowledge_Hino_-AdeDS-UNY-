@@ -2,29 +2,53 @@ function ExecuteScript(strId)
 {
   switch (strId)
   {
-      case "6g5Brhtn98U":
+      case "6Nu5Cc4EGoQ":
         Script1();
         break;
-      case "6hmQZEWVXvn":
+      case "5pRK0WXmQeS":
         Script2();
         break;
-      case "6bE0jkDakRZ":
+      case "5YWpIbJOnfr":
         Script3();
         break;
-      case "5rbpnvcmkz7":
+      case "6Jpjj1JbMq7":
         Script4();
         break;
-      case "5td3GQpkmG7":
+      case "5xhfGQPAe6r":
         Script5();
         break;
-      case "6RuRqr5xrkS":
+      case "66T4zT6XQi4":
         Script6();
         break;
-      case "6qRbwOsgrKO":
+      case "5drYC6qfD0E":
         Script7();
         break;
-      case "5WmmMqlyhTM":
+      case "6jtbK9AAYvw":
         Script8();
+        break;
+      case "6q3icaIPOG2":
+        Script9();
+        break;
+      case "5uKVjklW1ox":
+        Script10();
+        break;
+      case "5lUYjaNoJWU":
+        Script11();
+        break;
+      case "5W1wAqJ4jTe":
+        Script12();
+        break;
+      case "6l3NOV3T3Ot":
+        Script13();
+        break;
+      case "6lUYUJ0lkQX":
+        Script14();
+        break;
+      case "66jCSIpk8au":
+        Script15();
+        break;
+      case "5gvpiD1oww8":
+        Script16();
         break;
   }
 }
@@ -68,6 +92,22 @@ function Script2()
 {
   var player = GetPlayer();
 
+fetch(
+"https://script.google.com/macros/s/AKfycbxUBpCMAReM3XSkZOWrAanuyPW48vVlm22FB-fVfzS5d_69LnUZHl00iFbo-5HoCRDeUA/exec",
+{
+method:"POST",
+mode:"no-cors",
+body:JSON.stringify({
+Nama_Sales:player.GetVar("Nama_Sales"),
+p300_4:player.GetVar("300_4")
+})
+});
+}
+
+function Script3()
+{
+  var player = GetPlayer();
+
 var nama = localStorage.getItem("currentUser");
 
 localStorage.setItem(
@@ -81,7 +121,23 @@ player.GetVar("Progress_Count")
 );
 }
 
-function Script3()
+function Script4()
+{
+  var player = GetPlayer();
+
+fetch(
+"https://script.google.com/macros/s/AKfycbxUBpCMAReM3XSkZOWrAanuyPW48vVlm22FB-fVfzS5d_69LnUZHl00iFbo-5HoCRDeUA/exec",
+{
+method:"POST",
+mode:"no-cors",
+body:JSON.stringify({
+Nama_Sales:player.GetVar("Nama_Sales"),
+p300_1:player.GetVar("300_1")
+})
+});
+}
+
+function Script5()
 {
   var player = GetPlayer();
 
@@ -100,7 +156,23 @@ player.GetVar("Progress_Count")
 );
 }
 
-function Script4()
+function Script6()
+{
+  var player = GetPlayer();
+
+fetch(
+"https://script.google.com/macros/s/AKfycbxUBpCMAReM3XSkZOWrAanuyPW48vVlm22FB-fVfzS5d_69LnUZHl00iFbo-5HoCRDeUA/exec",
+{
+method:"POST",
+mode:"no-cors",
+body:JSON.stringify({
+Nama_Sales:player.GetVar("Nama_Sales"),
+p500_1:player.GetVar("500_1")
+})
+});
+}
+
+function Script7()
 {
   var player = GetPlayer();
 
@@ -117,7 +189,23 @@ player.GetVar("Progress_Count")
 );
 }
 
-function Script5()
+function Script8()
+{
+  var player = GetPlayer();
+
+fetch(
+"https://script.google.com/macros/s/AKfycbxUBpCMAReM3XSkZOWrAanuyPW48vVlm22FB-fVfzS5d_69LnUZHl00iFbo-5HoCRDeUA/exec",
+{
+method:"POST",
+mode:"no-cors",
+body:JSON.stringify({
+Nama_Sales:player.GetVar("Nama_Sales"),
+p500_4:player.GetVar("500_4")
+})
+});
+}
+
+function Script9()
 {
   var player = GetPlayer();
 
@@ -134,7 +222,23 @@ player.GetVar("Progress_Count")
 );
 }
 
-function Script6()
+function Script10()
+{
+  var player = GetPlayer();
+
+fetch(
+"https://script.google.com/macros/s/AKfycbxUBpCMAReM3XSkZOWrAanuyPW48vVlm22FB-fVfzS5d_69LnUZHl00iFbo-5HoCRDeUA/exec",
+{
+method:"POST",
+mode:"no-cors",
+body:JSON.stringify({
+Nama_Sales:player.GetVar("Nama_Sales"),
+pBus_1:player.GetVar("Bus_1")
+})
+});
+}
+
+function Script11()
 {
   var player = GetPlayer();
 
@@ -153,7 +257,23 @@ player.GetVar("Progress_Count")
 );
 }
 
-function Script7()
+function Script12()
+{
+  var player = GetPlayer();
+
+fetch(
+"https://script.google.com/macros/s/AKfycbxUBpCMAReM3XSkZOWrAanuyPW48vVlm22FB-fVfzS5d_69LnUZHl00iFbo-5HoCRDeUA/exec",
+{
+method:"POST",
+mode:"no-cors",
+body:JSON.stringify({
+Nama_Sales:player.GetVar("Nama_Sales"),
+pBus_4:player.GetVar("Bus_4")
+})
+});
+}
+
+function Script13()
 {
   var player = GetPlayer();
 
@@ -172,7 +292,47 @@ player.GetVar("Progress_Count")
 );
 }
 
-function Script8()
+function Script14()
+{
+  var player = GetPlayer();
+
+fetch(
+"https://script.google.com/macros/s/AKfycbxUBpCMAReM3XSkZOWrAanuyPW48vVlm22FB-fVfzS5d_69LnUZHl00iFbo-5HoCRDeUA/exec",
+{
+method:"POST",
+mode:"no-cors",
+body:JSON.stringify({
+Nama_Sales:player.GetVar("Nama_Sales"),
+Nilai_tes:player.GetVar("Nilai_tes")
+})
+});
+}
+
+function Script15()
+{
+  var player = GetPlayer();
+
+var data = {
+    Nama_Sales: player.GetVar("Nama_Sales")
+};
+
+fetch(
+    "https://script.google.com/macros/s/AKfycbxUBpCMAReM3XSkZOWrAanuyPW48vVlm22FB-fVfzS5d_69LnUZHl00iFbo-5HoCRDeUA/exec",
+    {
+        method: "POST",
+        mode: "no-cors",
+        body: JSON.stringify(data)
+    }
+)
+.then(() => {
+    alert("Data dikirim");
+})
+.catch(error => {
+    alert("Error: " + error);
+});
+}
+
+function Script16()
 {
   var player = GetPlayer();
 
